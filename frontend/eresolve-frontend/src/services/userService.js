@@ -1,7 +1,7 @@
 import api from './api';
 import { createComplaint } from './complaintService';
 
-// 🔐 Account Actions (USER role)
+// Account Actions (USER role)
 
 
 //Deactivate the authenticated user's account
@@ -12,7 +12,7 @@ const deactivateOwnAccount = (userId) =>
 const reactivateOwnAccount = (userId) =>
   api.put(`/api/users/reactivate/${userId}`);
 
-// 📄 Complaint Retrieval (USER role)
+// Complaint Retrieval (USER role)
 
 // Fetch a specific complaint by ID
 const fetchOwnComplaintById = (complaintId) =>
@@ -36,7 +36,7 @@ const getUpvotes = (complaintId) =>
 const upvoteComplaint = (complaintId) =>
   api.post(`/api/users/complaints/${complaintId}/upvote`);
 
-// 👤 Fetch authenticated user's account info
+// Fetch authenticated user's account info
 const fetchAuthenticatedUserInfo = () =>
   api.get('/api/users/me');
 
