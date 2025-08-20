@@ -1,6 +1,6 @@
 import api from './api';
 
-// 📝 Create complaint (multipart form)
+//Create complaint (multipart form)
 export const createComplaint = async (formData) => {
   try {
     const response = await api.post('/api/complaints/create', formData, {
@@ -14,27 +14,27 @@ export const createComplaint = async (formData) => {
   }
 };
 
-// 🗑️ Delete complaint by ID
+//Delete complaint by ID
 export const deleteComplaintById = (complaintId) =>
   api.delete(`/api/complaints/${complaintId}`);
 
-// 📂 Fetch all complaints (ADMIN only)
+//Fetch all complaints (ADMIN only)
 export const fetchAllComplaints = () =>
   api.get('/api/complaints/all');
 
-// 🔍 Fetch complaint by ID
+//Fetch complaint by ID
 export const fetchComplaintById = (complaintId) =>
   api.get(`/api/complaints/id/${complaintId}`);
 
-// 👤 Fetch complaints by user ID
+//Fetch complaints by user ID
 export const fetchComplaintsByUser = (userId) =>
   api.get(`/api/complaints/user/${userId}`);
 
-// 📊 Filter complaints by status
+//Filter complaints by status
 export const fetchComplaintsByStatus = (status) =>
   api.get(`/api/complaints/status/${status}`);
 
-// 🗂️ Filter complaints by category
+//Filter complaints by category
 export const fetchComplaintsByCategory = (category) =>
   api.get(`/api/complaints/category/${category}`);
 
