@@ -1,0 +1,1 @@
+// This file is now obsolete. react-i18next is used for language switching.
